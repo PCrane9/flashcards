@@ -6,7 +6,12 @@ html(lang="en")
         header
             h1 World of Warcraft Trivia
         section#content
-            h2 Welcome, traveler...
+            h2= prompt
+            if hint
+                p
+                    i Hint: #{hint}
+            else
+                p (There is no hint.)
         footer
             p Think you have 1337 lore knowledge? See if you are a ture Loremaster!
         

@@ -5,18 +5,21 @@ const app = express();
 app.set('view engine', 'pug');
 
 app.get('/', (req, res) => {
-    
+
     res.render('index');
-    
+
 });
 
-app.get('/hello', (req, res) => {
-    
-    res.send('<h1>Hello, Javascript Developer!</h1>');
-    
+app.get('/trivia', (req, res) => {
+
+    res.render('card', {
+        prompt: "Who is burried in Grant's tomb?",
+        hint: "Thin about whose tomb it is."
+    });
+
 });
 
 
-app.listen(3000, () =>{
+app.listen(3000, () => {
     console.log('The app is running on localhost: 3000');
 });
